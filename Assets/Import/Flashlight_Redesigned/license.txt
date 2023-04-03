@@ -1,0 +1,11 @@
+Model Information:
+* title:	Flashlight "Redesigned"
+* source:	https://sketchfab.com/3d-models/flashlight-redesigned-9eb56a48e3794731b3d3a01ade88f48d
+* author:	brian-aa (https://sketchfab.com/brian-aa)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Flashlight "Redesigned"" (https://sketchfab.com/3d-models/flashlight-redesigned-9eb56a48e3794731b3d3a01ade88f48d) by brian-aa (https://sketchfab.com/brian-aa) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
