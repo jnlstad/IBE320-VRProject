@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testScript : MonoBehaviour
+public class changeFlashlightColorScript : MonoBehaviour
 {
     [SerializeField] private Light lighting = null;
     [SerializeField] private Color colors;
