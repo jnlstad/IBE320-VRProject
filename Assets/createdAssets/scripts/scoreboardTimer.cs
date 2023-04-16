@@ -18,6 +18,9 @@ public class scoreboardTimer : MonoBehaviour
 
     [SerializeField] public GameObject obtainFlashlightObjective = null;
     [SerializeField] public GameObject getKeyObjective = null;
+    [SerializeField] public GameObject globalLight = null;    
+    [SerializeField] public GameObject music = null;
+
 
 
     private float stopwatch = 0;
@@ -58,6 +61,7 @@ public class scoreboardTimer : MonoBehaviour
             roomExitTimer.text = "You escaped the room in " + roomEscapeTime;
             obtainFlashlightObjective.SetActive(false);
             getKeyObjective.SetActive(true);
+            music.SetActive(true);
         }
 
         if(other.gameObject == mazeEscape)
@@ -67,6 +71,8 @@ public class scoreboardTimer : MonoBehaviour
             mazeEscape.SetActive(false);
             timer = false;
             mazeExitTimer.text = "You escaped the maze in " + mazeEscapeTime;
+            music.SetActive(true);
+            globalLight.SetActive(true);
         }
     }
 }
