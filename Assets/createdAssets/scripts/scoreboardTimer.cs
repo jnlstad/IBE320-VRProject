@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class scoreboardTimer : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class scoreboardTimer : MonoBehaviour
     [SerializeField] public GameObject roomEscape = null;
     [SerializeField] public GameObject mazeEscape = null;
     [SerializeField] public GameObject roomBlocker = null;
+    [SerializeField] public TextMeshProUGUI roomExitTimer = null;
+    [SerializeField] public TextMeshProUGUI mazeExitTimer = null;
+
+    [SerializeField] public GameObject obtainFlashlightObjective = null;
+    [SerializeField] public GameObject getKeyObjective = null;
 
 
     private float stopwatch = 0;
@@ -19,11 +25,8 @@ public class scoreboardTimer : MonoBehaviour
     private string mazeEscapeTime = "";
     private bool timer = false;
 
+
     // Start is called before the first frame update
-    void Start()
-    {
-        // stopwatch = 0;
-    }
 
     // Update is called once per frame
 
@@ -44,6 +47,7 @@ public class scoreboardTimer : MonoBehaviour
             beginning.SetActive(false);
             timer = true;
             roomBlocker.SetActive(true);
+            obtainFlashlightObjective.SetActive(true);
         }
 
         if(other.gameObject == roomEscape)
@@ -51,6 +55,9 @@ public class scoreboardTimer : MonoBehaviour
             roomEscapeTime = stopwatch.ToString("#.##");
             Debug.LogError("You escaped the room in " + roomEscapeTime);
             roomEscape.SetActive(false);
+            roomExitTimer.text = "You escaped the room in " + roomEscapeTime;
+            obtainFlashlightObjective.SetActive(false);
+            getKeyObjective.SetActive(true);
         }
 
         if(other.gameObject == mazeEscape)
@@ -59,6 +66,7 @@ public class scoreboardTimer : MonoBehaviour
             Debug.LogError("You escaped the maze in " + mazeEscapeTime);
             mazeEscape.SetActive(false);
             timer = false;
+            mazeExitTimer.text = "You escaped the maze in " + mazeEscapeTime;
         }
     }
 }

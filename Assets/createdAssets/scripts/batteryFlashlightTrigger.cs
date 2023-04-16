@@ -9,6 +9,7 @@ public class batteryFlashlightTrigger : MonoBehaviour
     [SerializeField] private GameObject battery = null;
     [SerializeField] private GameObject flashlight = null;
     [SerializeField] private GameObject handFlashLight = null;
+    [SerializeField] private GameObject handFlashLightMenu = null;
 
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +21,7 @@ public class batteryFlashlightTrigger : MonoBehaviour
             battery.SetActive(false);
             flashlight.SetActive(false); // The Flashlight
             handFlashLight.SetActive(true);
+            handFlashLightMenu.SetActive(true);
         }
     }
 }
